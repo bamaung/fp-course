@@ -121,7 +121,7 @@ instance Applicative ((->) t) where
   pure ::
     a
     -> ((->) t a)
-  pure a t = a
+  pure a = \_ -> a
 
   -- (<*>) :: (t -> a -> b) -> (t -> a) -> t -> b
   (<*>) ::
